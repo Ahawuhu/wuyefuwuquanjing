@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>物业运营全景公示</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="phone">
+        <header class="status-bar">
+          <span>4:18</span>
+          <span>5G&nbsp;&nbsp;WiFi&nbsp;&nbsp;54%</span>
+        </header>
+
+        <nav class="nav-bar">
+          <button class="back-button" type="button" aria-label="返回">‹</button>
+          <h1>物业大厅</h1>
+          <button class="capsule" type="button" aria-label="更多">
+            <span>•••</span>
+            <i></i>
+            <b></b>
+          </button>
+        </nav>
+
+        <section class="community-card">
+          <div class="community-logo" aria-hidden="true">
+            <span class="logo-ribbon logo-green"></span>
+            <span class="logo-ribbon logo-blue"></span>
+            <span class="logo-dot"></span>
+          </div>
+          <div>
+            <div class="community-title">
+              <h2>演示小区</h2>
+              <span>⌄</span>
+            </div>
+            <p>随时随地享受物业服务</p>
+          </div>
+        </section>
+
+        <section class="mode-switch" aria-label="展示模式切换">
+          <button class="mode-button active" type="button" data-mode="theme">主题模式</button>
+          <button class="mode-button" type="button" data-mode="timeline">时间轴模式</button>
+        </section>
+
+        <section class="theme-view view active" data-view="theme">
+          <section class="panel compact-panel">
+            <div class="icon-grid four" id="topActions"></div>
+          </section>
+
+          <section class="panel">
+            <div class="section-heading">
+              <h3>小区概况</h3>
+            </div>
+            <div class="icon-grid four" id="communityActions"></div>
+          </section>
+
+          <section class="panel">
+            <div class="section-heading with-action">
+              <h3>公示公开</h3>
+              <button class="pill-action" type="button" id="openTimeline">全景时间轴</button>
+            </div>
+            <div class="icon-grid four" id="publicActions"></div>
+          </section>
+        </section>
+
+        <section class="timeline-view view" data-view="timeline">
+          <section class="panel">
+            <div class="timeline-head">
+              <div>
+                <h3>全景公示时间轴</h3>
+                <p>按发布时间查看物业运营公示内容</p>
+              </div>
+              <span id="timelineCount">0 条</span>
+            </div>
+            <div class="type-tabs" id="typeTabs"></div>
+            <div class="timeline-list" id="timelineList"></div>
+          </section>
+        </section>
+
+        <section class="latest-card">
+          <div>
+            <span>最新公示</span>
+            <strong id="latestDate">2026/06/05</strong>
+          </div>
+          <button type="button" id="latestTitle">2026年5月物业服务月报</button>
+        </section>
+      </section>
+
+      <aside class="preview-note">
+        <p>独立小程序展示页</p>
+        <strong>主题色 #5AC17A</strong>
+      </aside>
+    </main>
+
+    <div class="drawer-mask" id="drawerMask" hidden>
+      <section class="detail-drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+        <div class="drawer-handle"></div>
+        <div class="drawer-head">
+          <div>
+            <span class="drawer-tag" id="drawerType">工作总结</span>
+            <h3 id="drawerTitle">2026年5月物业服务月报</h3>
+          </div>
+          <button type="button" id="closeDrawer" aria-label="关闭">×</button>
+        </div>
+        <div class="drawer-body" id="drawerBody"></div>
+      </section>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
